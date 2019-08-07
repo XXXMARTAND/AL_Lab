@@ -13,6 +13,6 @@ int n;
 printf("Enter n\n"); 
 scanf("%d",&n);
 printf("%d", fib(n)); 
-getchar(); 
+
 return 0; 
 } 

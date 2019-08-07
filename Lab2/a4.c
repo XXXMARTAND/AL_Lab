@@ -7,28 +7,28 @@ int isStrong( int num){
 
 
 
-    /* Input a number from user */
+
     
 
     originalNum=num;    
 
     sum = 0;
 
-    /* Find sum of factorial of digits */
+
     while(num > 0)
     {
 
-        /* Get last digit of num */
+
         lastDigit = num % 10;
 
-        /* Find factorial of last digit */
+
         fact = 1;
         for(i=1; i<=lastDigit; i++)
         {
             fact = fact * i;
         }
 
-        /* Add factorial to sum */
+
         sum = sum + fact;
 
         num = num / 10;
