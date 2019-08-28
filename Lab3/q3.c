@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,28 +30,28 @@ int main() {
 		j = 0, k = 0;
 
 		for(int l = 0; l < n; l++) {
-			if((i >> l) & 1)
+			if((1<<l) & i)
 				a1[j++] = arr[l];
 			else
 				a2[k++] = arr[l];
 		}
 		sum1 = 0, sum2 = 0;
 
-		for(int x = 0; x <= j; x++)
+		for(int x = 0; x < j; x++)
 			sum1 = sum1 + a1[x];
-		for(int y = 0; y <= k; y++)
+		for(int y = 0; y < k; y++)
 			sum2 = sum2 + a2[y];
 
 		printf("%d %d\n",sum1,sum2);
 
 		if(sum1 == sum2){
 			printf("{");
-			for(int x = 0; x <= j; x++)
+			for(int x = 0; x < j; x++)
 				printf("%d, ", a1[x]);
 			
 			printf("}, {");
 
-			for(int y = 0; y <= k; y++)
+			for(int y = 0; y < k; y++)
 				printf("%d, ", a2[y]);
 			printf("}\n");
 		}
@@ -59,5 +60,5 @@ int main() {
 
 
 
-	printf("{1, 2}, {3}\n");
+	//printf("{1, 2}, {3}\n");
 }
