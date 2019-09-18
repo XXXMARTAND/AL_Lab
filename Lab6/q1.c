@@ -39,54 +39,7 @@ NODE InsertIntoTree(NODE root,int val){
 	return root;
 
 }
-int ElementExists(NODE root,int val){
-	if(root){
-			if (val>root->value){
-			return ElementExists(root->right,val);
-			
-		}
-		else if (val<root->value){
-			return ElementExists(root->left,val);
-			
-		}
-		else if(val == root->value){
-		return 1;
 
-	}
-	else return 0;
-
-}
-}
-void SearchInsert(NODE root, int val){
-	if (ElementExists(root,val)){
-		printf("key found\n");
-	}
-	else {
-		InsertIntoTree(root,val);
-		printf("Element added\n");
-	}
-}
-void InOrder(NODE root){
-	if(root){
-		InOrder(root->left);
-		printf("%d\n",root->value );
-		InOrder(root->right);
-	}
-}
-void PreOrder(NODE root){
-	if(root){
-		printf("%d\n",root->value );
-		PreOrder(root->left);
-		PreOrder(root->right);
-	}
-}
-void PostOrder(NODE root){
-	if(root){
-		PostOrder(root->left);
-		PostOrder(root->right);
-		printf("%d\n",root->value );
-	}
-}
 int totalNodes(NODE node){
 	if (node)
 	{
@@ -104,9 +57,7 @@ int main(){
 		printf("1. Create Tree\n");
 		printf("2. Insert Elements\n");
 		printf("3. sum of nodes\n");
-		// printf("4. Inorder Traversal\n");
-		// printf("5. Preorded Traversal\n");
-		// printf("6. Postorder Traversal\n");
+		
 		printf("7. End\n");
 
 		scanf("%d",&a);
@@ -125,11 +76,7 @@ int main(){
 		case 3:printf("Total no. of nodes is %d \n",totalNodes(root));
 				
 				break;
-		// case 4: InOrder(root);
-		// 		break;
-		// case 5: PreOrder(root);
-		// 		break;
-		// case 6: PostOrder(root);
+	
 				break;
 		default: i=-1;
 	}
