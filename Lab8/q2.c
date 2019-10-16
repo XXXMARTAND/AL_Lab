@@ -3,9 +3,9 @@
     void main()
     {
         int heap[10], no, i, j, c, root, temp;
-        printf("\n Enter no of elements :");
+        printf("\n Enter no of elements");
         scanf("%d", &no);
-        printf("\n Enter the nos : ");
+        printf("\n Enter the elements");
         for (i = 0; i < no; i++)
            scanf("%d", &heap[i]);
         for (i = 1; i < no; i++)
@@ -23,7 +23,7 @@
                 c = root;
             } while (c != 0);
         }    
-        printf("Heap array : ");
+        printf("Unsorted Array");
         for (i = 0; i < no; i++)
             printf("%d\t ", heap[i]);
         for (j = no - 1; j >= 0; j--)
@@ -49,6 +49,5 @@
         printf("\n The sorted array is : ");
         for (i = 0; i < no; i++)
            printf("\t %d", heap[i]);
-        printf("\n Complexity : \n Best case = Avg case = Worst case = O(n logn) \n");
-
+        
     }
