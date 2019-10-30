@@ -1,20 +1,17 @@
-// Chnage-Making Problem
-
 #include <stdio.h>
-
 int main()
 {
 	int denom, d[100], use[100], i, n;
-	printf("Enter # denominations: ");
+	printf("Enter denomination COUNT");
 	scanf("%d", &denom);
 
-	printf("\nEnter denominations in descending order: \n");
+	printf("enter d1,d2....\n");
 	for (int i = 0; i < denom; ++i)
 	{
 		scanf("%d", &d[i]);
 	}
 
-	printf("Enter amount: ");
+	printf("Enter amount ");
 	scanf("%d", &n);
 
 	for (int i = 0; i < denom; ++i)
@@ -23,7 +20,7 @@ int main()
 		n %= d[i];
 	}
 
-	printf("\nSolution: \n");
+	printf("\nSol \n");
 	for (int i = 0; i < denom; ++i)
 	{
 		if (use[i] == 0)

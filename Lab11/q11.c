@@ -1,9 +1,5 @@
-// Kruskal's Algorithm - Minimum Cost Spanning Tree
-
 #include <stdio.h>
- 
 #define MAX 30
- 
 typedef struct edge
 {	
 	int u, v, w;
@@ -16,7 +12,6 @@ typedef struct list
 } list;
  
 list elist;
- 
 int G[MAX][MAX], n;
 list spanlist;
  
@@ -75,14 +70,10 @@ void kruskal()
 			}
 		}
 	}
- 
 	sort();
-	
 	for(i = 0;i < n; i++)
 		belongs[i] = i;
-	
 	spanlist.n = 0;
-	
 	for(i = 0; i < elist.n; i++)
 	{
 		c1 = find(belongs, elist.data[i].u);
@@ -114,10 +105,10 @@ void main()
 {
 	int i, j, total_cost;
 	
-	printf("Enter # vertices: ");
+	printf("Enter no of vertices ");
 	scanf("%d", &n);
 	
-	printf("\nEnter weight matrix [INF = 999]: \n");
+	printf("\nEnter weight matrix \n");
 	
 	for(i = 0; i < n; i++)
 	{
